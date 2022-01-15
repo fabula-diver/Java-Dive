@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 import java.nio.file.*;
 import java.io.*;
 
-public class Main 
+public class Login 
 {
 	public static void main(String[] args) 
 	{
@@ -11,7 +11,7 @@ public class Main
 		try 
 		{
 			//Files.exists(file, null); // not sure why null is needed, removing it makes the prog ignore the catch clause. 
-										// Probably because without null, the statement returns true or false, which is useless without an if statement.
+						    // Probably because without null, the statement returns true or false, which is useless without an if statement.
 			file.getFileSystem().provider().checkAccess(file); // checkAccess() is not possible. Joyce Farrell was wrong!
 		} catch(Exception e) {
 			System.out.println("File cannot be used for this application.");
@@ -41,7 +41,7 @@ public class Main
 					okToGo = true;
 					break; // break out of the while loop early if id and password have been found
 				}
-				s = reader.readLine();
+				s = reader.readLine(); // continue to read the next line if username and password are not correct. Without this line, the while loop runs forever.
 			}
 			reader.close();
 		} catch(Exception e) { // Exception e is way too general. Hopefully we can improve it in the future.

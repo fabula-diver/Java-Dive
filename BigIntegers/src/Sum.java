@@ -74,7 +74,7 @@ public class Sum
 			throw new RuntimeException("overflow");
 	}
 	
-	/* Prints the result */
+    /* Prints the result */
     public static void print(int[] digits) 
     {
         int start = 0;

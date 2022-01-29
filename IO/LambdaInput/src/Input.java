@@ -201,7 +201,7 @@ public class Input
 	private static String getZeroFractionRemoved(String string) 
 	{
 		int dotIndex; 	// position of decimal point in the string
-		int i;		  	// current position
+		int i;		// current position
 		int lastIndex;	// position of last character within string
 		
 		dotIndex = string.indexOf("."); // -1 means . is not in the string
